@@ -16,7 +16,7 @@ Usage is pretty straightforward. Start off by loading the package.
 
 Now access Earth's gravitational acceleration in MKS units.
 
-    julia> PhysicalConstants.MKS.GravAccel
+    julia> PhysicalConstants.MKS.GravAccel()
     9.80665
 
 Or in CGS units.
@@ -28,3 +28,15 @@ Of finally, in Imperial units.
 
     julia> PhysicalConstants.Imperial.GravAccel
     32.174049
+
+## Units
+
+By default only the value of the constant is given. If you want to get a `Unitful.jl` `Quantity` you can either call
+
+    julia> PhysicalConstants.MKS.GravAccel( units = true )
+
+Or use the global switch `switch_units()` which lets you toggle the default value of the `units` keyword.
+
+## List of constants
+
+TODO
